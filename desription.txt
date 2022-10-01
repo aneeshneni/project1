@@ -1,0 +1,26 @@
+We started by first asking the user for their input for filename,
+which can then be read in and saved as the inputFile name. After this,
+we created a variable called size and passed that in by reference to the
+readStories() method along with the name of the inputFile.
+
+Using these two variables, in readStories, we get the size/first line of 
+the input, then we malloc enough array space for our stories structs -
+which consists of story url, name, and popularity. Using this malloced
+space, we set all our story structs to the appropriate values.
+Then, we close the file and return the stories address space back
+To the main method where we first called this function.
+
+Next, in the main method, we find the mode of the overall stories by
+passing size and the actual stories as the two parameters. In findMode(),
+we first malloc enough space for all the popularity scores to be stored as
+ints in an array. We then loop through the stories to sort them according
+the their popularity score. After sorting the array, we then find the
+actual mode of the data by looping through again and using a simple max
+counter and return the mode value. We also free the popularity scores
+array space that we malloced here.
+
+Once back in the main method, we now print the stories by passing through
+the stories structs array, the mode, and the size of the structs array.
+Using these values, printStories() simply prints out the values of the
+corresponding modes from the stories array. We then go back to
+The main method and free all the structs in the stories array and return.
