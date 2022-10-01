@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
 #include <iostream>
 #include <fstream>
+#include <string.h>
 
 using namespace std;
 
@@ -137,7 +137,7 @@ int main() {
     string storyName;
     cout << "Enter stories filename: ";
     cin >> storyName;
-    string inputFile = "/Users/aneeshn/Downloads/CS 105C/" + storyName;
+    string inputFile = "/u/aneesh04/cs105c/project1/" + storyName;
 
     int size;
     Story* stories = readStories(inputFile, size);
